@@ -74,7 +74,7 @@ public class GlobalExceptionHandler {
             SituacaoException ex, WebRequest request) {
         logger.error("Formato inválido: {}", ex.getMessage());
 
-        String mensagemErro = String.format("Valor inválido para o campo '%s'. Use um dos valores permitidos: %s",
+        String mensagemErro = String.format("Valor inválido para o campo Situacao. Use um dos valores permitidos: %s",
                ex.getLocalizedMessage());
 
         ProblemDetail details = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, mensagemErro);
