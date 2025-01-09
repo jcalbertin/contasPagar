@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS conta (
+     id SERIAL PRIMARY KEY,
+     data_vencimento DATE NOT NULL,
+     data_pagamento DATE,
+     valor DECIMAL(15,2) NOT NULL,
+     descricao VARCHAR(255) NOT NULL,
+     situacao VARCHAR(50) NOT NULL DEFAULT 'PENDENTE',
+     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
